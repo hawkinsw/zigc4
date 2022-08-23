@@ -33,7 +33,6 @@ pub fn RC4(allocator: mem.Allocator) type {
         // From https://nullprogram.com/blog/2014/07/23/
         // wikipedia (https://en.wikipedia.org/wiki/RC4)
         pub fn schedule(this: *This, keymat: []const u8) void {
-            var debugout = io.null_writer;
             // Note: The i and j here are *not* the same as this's i/j.
             // Those are only updated when there are prns being generated.
             var j: u16 = 0;
